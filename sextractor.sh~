@@ -1,0 +1,16 @@
+
+echo "############################################################################"
+sex  M13_i.fits,M13_i.fits  -c sex.conf -CATALOG_NAME M13_i.sexcat   -SEEING_FWHM 2.1  -MAG_ZEROPOINT 27.94 -DETECT_THRESH 2 -DETECT_MINAREA  3
+
+echo "############################################################################"
+sex  M13_i.fits,M13_g.fits  -c sex.conf -CATALOG_NAME M13_ig.sexcat  -SEEING_FWHM 2.1  -MAG_ZEROPOINT 28.82 -DETECT_THRESH 2 -DETECT_MINAREA  3
+
+echo "############################################################################"
+sex  M13_i.fits,M13_r.fits  -c sex.conf -CATALOG_NAME M13_ir.sexcat  -SEEING_FWHM 2.1  -MAG_ZEROPOINT 28.53 -DETECT_THRESH 2 -DETECT_MINAREA  3
+
+echo "############################################################################"
+sex  M13_g.fits  -c sex.conf -CATALOG_NAME M13_g.sexcat  -SEEING_FWHM 2.1  -MAG_ZEROPOINT 28.82 -DETECT_THRESH 2 -DETECT_MINAREA  3
+
+echo "############################################################################"
+sex  M13_r.fits  -c sex.conf -CATALOG_NAME M13_r.sexcat  -SEEING_FWHM 1.9  -MAG_ZEROPOINT 28.53 -DETECT_THRESH 2 -DETECT_MINAREA  3
+

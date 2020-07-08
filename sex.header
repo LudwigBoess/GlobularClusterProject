@@ -1,0 +1,11 @@
+QueryResult
+
+# Config entry for original catalog server:
+serv_type: catalog
+long_name: SExtractor catalog
+short_name: SExCat
+symbol: id diamond  8.0
+# End config entry
+
+id	ra	dec	X_IMAGE	Y_IMAGE	MAG_AUTO	MAGERR_AUTO	MAG_APER	MAGERR_APER	BACKGROUND	THRESHOLD	FWHM_IMAGE	FLAGS	CLASS_STAR
+------------------

@@ -1,0 +1,22 @@
+# define constants
+d  = 9000.           # 9 kpc distance
+mM = 5.*log10(d/10.) # distance modulus
+Ag = 0.055	     # galactic extinction in each filterband
+Ai = 0.028
+ATg = 0.59
+ATi = 0.54
+
+
+# manipulate plot
+set xlabel "g-i"
+set ylabel "i"
+set yrange [12:-10]
+
+isochrones = 'isoc_z0004.dat'
+
+plot "gi.txt"    u ($1-Ag-ATg-$2+Ai+ATg):($2-mM-Ai-ATi) pt 7 ps 0.1 lc rgb 'black' title "M13 (Wendelstein)" ,\
+     isochrones  u ($14-$16):($1==10.25 ? $16 : 1/0) title " 18 Gyr" pt 7 lc rgb 'red',\
+     isochrones  u ($14-$16):($1==9.60  ? $16 : 1/0) title "  4 Gyr" pt 7 lc rgb '#00AA33' ,\
+     isochrones  u ($14-$16):($1==8.00  ? $16 : 1/0) title "100 Myr" pt 7 lc rgb 'blue',\
+     isochrones  u ($14-$16):($1==7.00  ? $16 : 1/0) title " 10 Myr" pt 7 lc rgb 'purple'
+
